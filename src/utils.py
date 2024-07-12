@@ -5,42 +5,6 @@ from s3fs import S3FileSystem  # Interface to S3, providing a file-like interfac
 import boto3  # Amazon Web Services (AWS) SDK for Python, allows Python developers to write software that uses services like Amazon S3
 from src.exception import CustomException  # Import CustomException class for handling exceptions
 
-# Define a function to save a JSON object to a local file
-def save_json_to_local(file_path, object):
-    try:
-        with open(file_path, "w") as file:
-            json.dump(object, file)
-    except Exception as e:
-        raise CustomException(e, sys)
-
-# Define a function to load a JSON object from a local file
-def load_json_from_local(file_path):
-    try:
-        with open(file_path, "r") as file:
-            obj = json.load(file)
-        return obj
-    except Exception as e:
-        raise CustomException(e, sys)
-
-# Define a function to save a JSON object to an S3 bucket
-def save_json_to_s3(file_path, object):
-    try:
-        fs = S3FileSystem()
-        with fs.open(file_path, "w") as file:
-            json.dump(object, file)
-    except Exception as e:
-        raise CustomException(e, sys)
-
-# Define a function to load a JSON object from an S3 bucket
-def load_json_from_s3(file_path):
-    try:
-        fs = S3FileSystem()
-        with fs.open(file_path, "r") as file:
-            obj = json.load(file)
-        return obj
-    except Exception as e:
-        raise CustomException(e, sys)
-
 # Define a function to upload a directory to an S3 bucket
 def upload_directory_to_s3(bucket_name, s3_folder, local_directory):
     s3_client = boto3.client('s3')
