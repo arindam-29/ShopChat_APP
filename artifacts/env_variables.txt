@@ -1,0 +1,17 @@
+# Add below keys to Github - Actions secrets and variables
+### Note: All keys without and quotes
+
+GOOGLE_API_KEY = [get it from, (login required): https://aistudio.google.com/app/apikey]
+OPENAI_API_KEY = [get it from, (login required): https://platform.openai.com/settings/profile?tab=api-keys]
+AWS_ACCESS_KEY_ID = [get it from, (AWS login required) AWS account -> IAM -> Users ->  security credentials -> Create access key ]
+AWS_SECRET_ACCESS_KEY = [Same as AWS_ACCESS_KEY_ID]
+AWS_REGION = "us-east-1" [Use this US East (N. Virginia)]
+
+S3_BUCKET_NAME = [login to AWS account and create a S3 bucket for storing all the data]
+
+DATA_BUCKET_NAME = amazon-berkeley-objects [DO NOT change this, S3 bucket for Amazon Berkeley Objects]
+ARTIFACTS_FOLDER = "../artifacts/" [DO NOT change this, data artifacts folder used within the project]
+WORKING_DIR = "../artifacts/downloads/" [DO NOT change this, temporary folder used within the project]
+
+ECR_REPOSITORY_NAME = [login to AWS and create a ECR repository, add the name of the repository]
+AWS_ECR_LOGIN_URI = [provide the ECR repository login uri here. E.g. "xxxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com"]

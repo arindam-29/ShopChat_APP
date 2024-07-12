@@ -1,0 +1,19 @@
+# comment
+.venv
+.git
+.gitignore
+logs
+venv
+*.md
+notebooks/*
+src/__pycache__/*
+src/components/*
+src/components/*
+.copy_env.txt
+copy_env.txt
+artifacts/project/*
+artifacts/your/*
+artifacts/downloads/*
+artifacts/GOOGLE_FAISS_DB/*
+artifacts/OPENAI_FAISS_DB/*
+artifacts/FINETUNE_FAISS_DB/*
