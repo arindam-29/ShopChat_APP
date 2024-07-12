@@ -1,6 +1,6 @@
 ### YOU WILL BE ASKED TO DELETE/REMOVE BELOW LINE (.github/*) FROM THIS FILE AND SAVE BEFORE RUNNING AWS CICD PIPELINE ###
 
-.github/*
+#.github/*
 
 ### ONLY DELETE/REMOVE ABOVE LINE (.github/*). DO NOT CHANGE ANYTHING ELSE IN THIS FILE ###
 ##########################################################################################################################
